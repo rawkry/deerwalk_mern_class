@@ -3,16 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
-     
     "start": "node backend/server",
-    "serve": "nodemon backend/server"
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Sudeep Paudel",
   "license": "ISC",
   "dependencies": {
-    "mongos": "^0.0.0"
-    
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.1.8"
   }
 }
